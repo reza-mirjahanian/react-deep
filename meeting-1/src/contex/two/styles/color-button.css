@@ -1,0 +1,11 @@
+.color-button {
+  background: #fff;
+  border: 5px solid #CCC;
+  padding: .5em 1em;
+  min-width: 100px;
+  font-size: 1em;
+}
+
+.color-button--selected {
+  border-color: #000;
+}

@@ -1,3 +1,6 @@
+### Props are Read-Only
+Whether you declare a component as a function or a class, it must never modify its own props.
+
 ### A pure function is a function which:
 
 Given the same input, always returns the same output.
@@ -9,10 +12,14 @@ Pure Components in React are the components which do not re-renders when the val
 
 ###  Features of React Pure Components
 
-Prevents re-rendering of Component if props or state is the same
-Takes care of “shouldComponentUpdate” implicitly
-State and Props are Shallow Compared
-Pure Components are more performant in certain cases
+
+- Prevents re-rendering of Component if props or state is the same
+
+- Takes care of “shouldComponentUpdate” implicitly
+
+- State and Props are Shallow Compared
+
+- Pure Components are more performant in certain cases
 
 ###  We can convert component to pure component as below:
 

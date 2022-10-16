@@ -56,3 +56,17 @@ So let’s refresh  **when React components re-render**:
 -   when component's state changed
 -   when parent component re-renders
 -   when a component uses context and the value of its provider changes
+
+
+
+Let’s recap the rules of performant hooks before leaving:
+
+-   every state change in a hook will cause its “host” component to re-render, regardless of whether this state is returned in the hook value and memoised or not
+-   the same with chained hooks, every state change in a hook will cause all “parent” hooks to change until it reaches the “host” component, which again will trigger the re-render
+
+And the things to watch out for, when writing or using custom hooks:
+
+-   when using a custom hook, make sure that the state that this hook encapsulates is not used on the level it wouldn’t have been used with the components approach. Move it “down” to a smaller component if necessary
+-   never implement “independent” state in a hook or use hooks with the independent state
+-   when using a custom hook, make sure it doesn’t perform some independent state operations, that are not exposed in its return value
+-   when using a custom hook, make sure that all hooks that it uses also follow the rules from the above
